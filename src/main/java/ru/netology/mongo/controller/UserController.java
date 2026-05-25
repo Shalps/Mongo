@@ -36,7 +36,7 @@ public class UserController {
       user.setAge(userDetails.getAge());
       return userRepository.save(user);
    }
-   @DeleteMapping("{id}")
+   @DeleteMapping("/{id}")
    public void deleteUser(@PathVariable String id){
        userRepository.deleteById(id);
    }
